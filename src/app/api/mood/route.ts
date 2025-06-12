@@ -1,3 +1,5 @@
+// @typescript-eslint/no-unused-vars
+
 import { moods } from "@/lib/utils/mood";
 import { NextRequest, NextResponse } from "next/server";
 

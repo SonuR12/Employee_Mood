@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <main className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-sky-100 via-rose-50 to-orange-100 dark:from-zinc-900 dark:via-zinc-800 dark:to-zinc-900 transition-colors duration-700 px-4">
       {/* Decorative Blur Circle */}
@@ -18,7 +16,7 @@ export default function Home() {
         className="z-10 max-w-xl w-full text-center space-y-6"
         initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
           className="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white"
@@ -26,7 +24,9 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Welcome to <span className="text-pink-500 dark:text-pink-400">Mood Tracker</span> 🧠
+          Welcome to{" "}
+          <span className="text-pink-500 dark:text-pink-400">Mood Tracker</span>{" "}
+          🧠
         </motion.h1>
 
         <motion.p
@@ -35,7 +35,8 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          A simple way to log your mood and help your team stay emotionally connected.
+          A simple way to log your mood and help your team stay emotionally
+          connected.
         </motion.p>
 
         <motion.div
@@ -43,11 +44,8 @@ export default function Home() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.6, duration: 0.4 }}
         >
-          <Button
-            onClick={() => router.push("/mood")}
-            className="px-6 py-5 text-lg rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105"
-          >
-            Submit Your Mood
+          <Button className="px-6 py-5 text-lg rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
+            <Link href="/mood">Submit Your Mood</Link>
           </Button>
         </motion.div>
       </motion.div>
