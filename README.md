@@ -43,3 +43,15 @@ A clean and responsive full-stack web app built with **Next.js 14 App Router**, 
 
 ## 📦 Project Structure
 
+app/
+├─ page.tsx # Home
+├─ mood/page.tsx # Mood Submission
+├─ thank-you/page.tsx # Thank You Page
+├─ admin/page.tsx # Dashboard
+├─ api/
+│ └─ mood/route.ts # API Handler (GET + POST)
+│
+└─ utils/
+└─ moods.ts # In-memory store
+
+
