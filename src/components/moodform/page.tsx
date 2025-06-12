@@ -48,7 +48,7 @@ export default function MoodPage() {
       } else {
         throw new Error("Failed to submit mood.");
       }
-    } catch (err: any) {
+    } catch (error) {
       toast.error("Error submitting mood", {
         description: err.message,
       });
