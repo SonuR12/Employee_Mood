@@ -22,11 +22,11 @@ export default function ThankYouPage() {
 
         <div className="flex flex-col gap-4 pt-4">
           <Link href="/">
-            <Button className="w-full dark:bg-white/95">Return to Home</Button>
+            <Button className="w-full h-10 dark:bg-white/95 hover:cursor-pointer">Return to Home</Button>
           </Link>
 
           <Link href="/admin">
-            <Button variant="outline" className="w-full">
+            <Button variant="outline" className="w-full h-10 hover:cursor-pointer">
               Go to Admin Dashboard
             </Button>
           </Link>

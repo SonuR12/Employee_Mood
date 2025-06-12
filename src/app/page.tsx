@@ -44,9 +44,11 @@ export default function Home() {
           animate={{ scale: 1 }}
           transition={{ delay: 0.6, duration: 0.4 }}
         >
-          <Button className="px-6 py-5 text-lg rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
-            <Link href="/mood">Submit Your Mood</Link>
-          </Button>
+          <Link href="/mood">
+            <Button className="px-6 py-5 text-lg hover:cursor-pointer rounded-xl shadow-md hover:shadow-lg transition-transform hover:scale-105">
+              Submit Your Mood
+            </Button>
+          </Link>
         </motion.div>
       </motion.div>
     </main>

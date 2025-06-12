@@ -92,7 +92,7 @@ export default function MoodPage() {
               <button
                 key={value}
                 onClick={() => setSelectedMood(value)}
-                className={`flex flex-col items-center px-3 py-2 rounded-xl transition-all border-2 ${
+                className={`flex flex-col items-center px-3 py-2 w-20 rounded-xl transition-all border-2 ${
                   selectedMood === value
                     ? "border-pink-500 bg-pink-100 dark:bg-pink-900"
                     : "border-gray-300 dark:border-zinc-700 hover:bg-gray-100 dark:hover:bg-zinc-800"
@@ -117,7 +117,7 @@ export default function MoodPage() {
           <Button
             onClick={handleSubmit}
             disabled={loading}
-            className="w-full text-lg"
+            className="w-full h-11 text-lg hover:cursor-pointer"
           >
             {loading ? "Submitting..." : "Submit Mood"}
           </Button>
