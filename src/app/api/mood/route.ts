@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     };
     moods.push(entry);
     return NextResponse.json({ success: true, entry });
-  } catch (error) {
+  } catch (error: any) {
     return NextResponse.json({ error: "Invalid data" }, { status: 400 });
   }
 }

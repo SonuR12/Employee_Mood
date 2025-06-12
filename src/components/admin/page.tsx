@@ -30,7 +30,7 @@ export default function AdminPage() {
       try {
         const parsed = JSON.parse(local);
         if (Array.isArray(parsed)) localEntries = parsed;
-      } catch (error) {
+      } catch (error : any) {
         console.error("Invalid JSON in localStorage");
       }
     }
@@ -52,7 +52,7 @@ export default function AdminPage() {
         setEntries(allEntries.reverse());
         localStorage.setItem("moodEntries", JSON.stringify(allEntries));
         console.log(allEntries)
-      } catch (error) {
+      } catch (error: any) {
         // fallback to local only
         setEntries(localEntries.reverse());
         console.warn("API fetch failed. Using localStorage only.");
